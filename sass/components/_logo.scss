@@ -1,11 +1,15 @@
 .logo {
+    font-size: 24px;
     text-decoration: none;
     font-family: 'Raleway';
     font-weight: 700;
-    font-size: 26px;
     line-height: calc(31 / 26);
     color: #000000;
     margin-right: 93px;
+
+    @media screen and (min-width: 768px){ 
+      font-size: 26px;
+      }
   }
   .logo__footer {
     margin-right: 0;

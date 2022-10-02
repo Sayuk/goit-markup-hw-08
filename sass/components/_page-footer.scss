@@ -32,8 +32,13 @@
 
   
   .footer-bloc {
-    display: flex;
-    align-items:baseline;
+    text-align: center;
+
+    @media screen and (min-width: 768px){ 
+      display: flex;
+      align-items:baseline;
+      }
+    
   }
   .title-footer {
     margin-top: 0;
@@ -45,7 +50,11 @@
     text-transform: uppercase;
   }
   .footer__contacts {
+    margin: 0;
+    
+    @media screen and (min-width: 768px){ 
     margin-right: 70px;
+    }
   }
   .footer-icon {
     fill: var(--main-background-cl);
