@@ -1,32 +1,52 @@
 .header {
-    letter-spacing: 0.02em;
-    font-weight: 500;
-    border-bottom: 1px solid #ececec;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    
-  
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  border-bottom: 1px solid #ececec;
+  // padding-top: 15px;
+  // padding-bottom: 15px;
   }
+
   .nav {
     align-items: center;
     display: flex;
     margin-right: auto;
    
   }
+
   .header__container{
     display: flex;
-  
-  
+
+    @media screen and (min-width: 768px){
+      padding: 21px 0 21px 0 ;
+      }
+      @media screen and (min-width: 1200px){
+        padding: 25px 0 25px 0 ;
+        }
+
   }
   .nav__list {
-    display: flex;
-    align-items: center;
+    display: none;
+
+    @media screen and (min-width: 768px){
+      display: flex;
+      align-items: center;
+      }
 
     &:last-child {
       margin-right: 0;
     }
   
   }
+  .nav__contact{
+    @media screen and (min-width: 768px){
+      display: block;
+      }
+      @media screen and (min-width: 1200px){
+        display: flex;
+        gap:30px;
+        }
+  }
+
   .nav__link{
     display: flex;
     align-items: center;
@@ -65,8 +85,9 @@
   }
 
   .nav__item-contact {
-    display: flex;
-    margin-right: 50px;
+    @media screen and (min-width: 768px){
+    margin-bottom: 10px;
+    
     font-weight: 500;
     letter-spacing: 0.02em;
     color: #757575;
@@ -74,18 +95,41 @@
     transition-property:fill, color ;
     transition-duration:250ms ;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-
     &:last-child {
-      margin-right: 0;
+      margin-bottom: 0;
     }
+
+    @media screen and (min-width:1200px){
+      margin-bottom: 0;
+      display: flex;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+
+      }
+    
   }
   
   .pic-email{
-  margin-right: 10px;
+    @media screen and (min-width: 768px){
+      margin-right: 8px;
+      }
+    @media screen and (min-width: 1200px){
+      margin-right: 10px;
+        }
+ 
   }
   
   .pic-smartphone{
-    margin-right: 10px;
+    @media screen and (min-width: 768px){
+      margin-right: 8px;
+      }
+    @media screen and (min-width: 1200px){
+      margin-right: 10px;
+        }
+ 
   }
  
   
