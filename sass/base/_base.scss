@@ -8,9 +8,12 @@ body {
 }
 .section {
   padding-bottom: 60px;
+  padding-top: 60px;
 
   @media screen and (min-width: 1200px) {
     padding-bottom: 94px;
+
+    padding-top: 94px;
   }
 }
 .container {
@@ -18,7 +21,7 @@ body {
   margin-right: auto;
 
   max-width: 450px;
-  justify-content: center;
+  
 
   @media screen and (min-width: 768px) {
     max-width: 738px;
@@ -53,15 +56,12 @@ body {
   }
 }
 .section-btn {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(/images/bg_mob.png);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg_mob.png);
   background-repeat: no-repeat;
   background-position: center;
-
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 60px;
   text-align: center;
   padding-top: 118px;
   padding-bottom: 118px;
@@ -76,10 +76,10 @@ body {
   @media screen and (min-width: 1200px) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(/images/bg.png);
-    width: 1200px;
+    width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    margin-bottom: 94px;
+    
   }
 }
 
@@ -109,10 +109,11 @@ body {
 //   }
 
 .description__list {
-  justify-content: space-between;
+
+ 
   @media screen and (min-width: 768px) {
     display: flex;
-
+    gap: 30px;
     flex-wrap: wrap;
   }
 }
@@ -123,9 +124,12 @@ body {
 
   @media screen and (min-width: 768px) {
     max-width: 354px;
+    margin-bottom: 0;
+    
   }
   @media screen and (min-width: 1200px) {
     max-width: 270px;
+    
   }
 }
 .description__title {
@@ -220,14 +224,18 @@ body {
   }
 }
 .team-list {
+ 
+  
   @media screen and(min-width:768px) {
     gap: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
   }
   @media screen and(min-width:1200px) {
     justify-content: space-between;
+    
   }
 }
 
@@ -236,10 +244,24 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin-bottom: 30px;
+  
+  &.team-list-item:last-child{
+    margin-bottom: 0px;
+
+    @media screen and(min-width:768px) {
+      margin-bottom: 0px;
+    }
+    }
+    @media screen and(min-width:1200px) {
+      margin-bottom: 0px;
+      
+    }
 }
 .team-info {
   padding-top: 30px;
   padding-bottom: 30px;
+  
 }
 .name {
   margin-top: 0;
