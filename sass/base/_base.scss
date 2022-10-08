@@ -13,7 +13,7 @@ body {
   @media screen and (min-width: 1200px) {
     padding-bottom: 94px;
 
-    padding-top: 94px;
+    padding-top: 0;
   }
 }
 .container {
@@ -70,15 +70,16 @@ body {
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/tablet-bg.png);
-    width: 768px;
+    max-width: 768px;
   }
 
   @media screen and (min-width: 1200px) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/bg.png);
-    width: 1600px;
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    margin-bottom: 94px;
     
   }
 }
@@ -121,6 +122,10 @@ body {
 .description__item {
   max-width: 450px;
   margin-bottom: 30px;
+  
+  &.description__item:last-child{
+    margin-bottom: 0;
+  }
 
   @media screen and (min-width: 768px) {
     max-width: 354px;
@@ -167,6 +172,7 @@ body {
 
   @media screen and(min-width:1200px) {
     display: block;
+    
   }
 }
 .about__list {
@@ -247,14 +253,14 @@ body {
   margin-bottom: 30px;
   
   &.team-list-item:last-child{
-    margin-bottom: 0px;
-
+    margin-bottom: 0;
+  }
     @media screen and(min-width:768px) {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
-    }
+    
     @media screen and(min-width:1200px) {
-      margin-bottom: 0px;
+      margin-bottom: 0;
       
     }
 }

@@ -33,7 +33,7 @@ body {
 @media screen and (min-width: 1200px) {
   .section {
     padding-bottom: 94px;
-    padding-top: 94px;
+    padding-top: 0;
   }
 }
 
@@ -99,16 +99,17 @@ body {
   .section-btn {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/tablet-bg.png);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet-bg.png);
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .section-btn {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bg.png);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg.png);
-    width: 1600px;
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    margin-bottom: 94px;
   }
 }
 
@@ -149,6 +150,9 @@ body {
 .description__item {
   max-width: 450px;
   margin-bottom: 30px;
+}
+.description__item.description__item:last-child {
+  margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
   .description__item {
@@ -307,16 +311,16 @@ body {
   margin-bottom: 30px;
 }
 .team-list-item.team-list-item:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
-  .team-list-item.team-list-item:last-child {
-    margin-bottom: 0px;
+  .team-list-item {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .team-list-item {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -863,6 +867,9 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-bloc {
     padding: 0;
+    -webkit-box-pack: none;
+        -ms-flex-pack: none;
+            justify-content: none;
   }
 }
 
@@ -900,7 +907,6 @@ body {
 @media screen and (min-width: 1200px) {
   .footer__contacts {
     text-align: left;
-    margin-left: 15px;
     margin-right: 70px;
   }
 }
@@ -946,7 +952,7 @@ body {
 @media screen and (min-width: 1200px) {
   .subscription {
     margin-top: 0;
-    margin-left: 93px;
+    margin-left: auto;
   }
 }
 
@@ -1422,7 +1428,6 @@ label {
   display: -ms-flexbox;
   display: flex;
   color: var(--akcent-cl);
-  gap: 10px;
   font-size: 18px;
   line-height: 1.2222222222;
   font-weight: 500;
@@ -1445,7 +1450,6 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 32px;
   margin-bottom: 64px;
 }
 
@@ -1463,8 +1467,9 @@ label {
   color: #757575;
 }
 
-.line {
+.line::after {
+  content: "|";
+  margin-left: 10px;
+  margin-right: 10px;
   color: rgba(33, 33, 33, 0.2);
-  height: 22px;
-  width: 1px;
 }/*# sourceMappingURL=main.css.map */

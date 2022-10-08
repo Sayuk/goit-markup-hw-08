@@ -43,7 +43,7 @@
 .social-menu {
   display: flex;
   color: var(--akcent-cl);
-  gap: 10px;
+
   font-size: 18px;
   line-height: calc(22 / 18);
   font-weight: 500;
@@ -61,7 +61,6 @@
 .contact-menu {
   display: flex;
   flex-direction: column;
-  gap: 32px;
   margin-bottom: 64px;
 }
 .contact__tel {
@@ -76,8 +75,9 @@
   font-weight: 500;
   color: #757575;
 }
-.line {
+.line::after {
+  content: "|";
+  margin-left: 10px;
+  margin-right: 10px;
   color: rgba(33, 33, 33, 0.2);
-  height: 22px;
-  width: 1px;
 }
